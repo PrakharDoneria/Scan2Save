@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 pb-20">
       {/* Hero Section */}
-      <section className="bg-brand-red text-white py-16 px-4 md:py-24 rounded-b-[40px] shadow-lg relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+      <section className="bg-brand-red text-white py-16 px-4 md:py-24 rounded-b-[40px] shadow-lg relative">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 rounded-b-[40px] overflow-hidden"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-20">
           <div className="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 backdrop-blur-sm">
             <HeartPulse size={48} className="text-white animate-pulse" />
           </div>
