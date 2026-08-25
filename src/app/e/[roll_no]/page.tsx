@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import { Profile } from '@/types/profile';
-import { AlertTriangle, Phone, MapPin, HeartPulse, ShieldAlert, Clock } from 'lucide-react';
+import { AlertTriangle, Phone, MapPin, HeartPulse, ShieldAlert, Clock, Printer } from 'lucide-react';
 import Link from 'next/link';
 import FirstAidAssistant from '@/components/FirstAidAssistant';
 
@@ -201,6 +201,14 @@ export default function EmergencyProfilePage() {
             )}
             Share Live Location via WhatsApp
           </button>
+
+          <Link
+            href={`/print/${profile.roll_no}`}
+            className="w-full bg-white border-2 border-gray-900 text-gray-900 hover:bg-gray-50 font-bold py-5 px-6 rounded-2xl shadow-sm transition transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 text-xl"
+          >
+            <Printer size={28} />
+            Print ID Card
+          </Link>
         </div>
 
       </div>
