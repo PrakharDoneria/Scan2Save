@@ -49,14 +49,14 @@ export async function POST(request: Request) {
         messages: [
           { 
             role: "system", 
-            content: `You are a medical data extraction AI. Extract the following information from the provided prescription/medical document text into a raw JSON format (no markdown code blocks, just raw parseable JSON).
+            content: `You are a helpful data parsing assistant. Your task is to extract structured information from the provided text into a raw JSON format (no markdown code blocks, just raw parseable JSON).
 Keys required:
 - "blood_group": string (e.g., "A+", "O-", or "" if not found)
 - "allergies": string (e.g., "Penicillin, Peanuts" or "None known")
 - "medical_conditions": string (e.g., "Asthma, Type 1 Diabetes" or "None declared")
 - "habits": string (e.g., "Smoking" or "None known")
 
-Analyze the document carefully and combine related findings.`
+This is for an automated data-entry system. Do not provide medical advice. Just extract the text into the exact JSON format requested.`
           },
           { role: "user", content: markdownContent }
         ],

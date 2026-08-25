@@ -43,6 +43,7 @@ export async function POST(request: Request) {
 
     // ttsResponse has audios array of base64 strings
     return NextResponse.json({
+      text: llmOutput,
       audioBase64: ttsResponse.audios[0]
     });
   } catch (error: any) {
